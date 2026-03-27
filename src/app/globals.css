@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #F3F2EF;
+  --foreground: #191919;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+/* Gradient de fond LinkedIn subtil */
+.linkedin-bg {
+  background: linear-gradient(180deg, #F3F2EF 0%, #FFFFFF 50%, #F3F2EF 100%);
+}
+
+/* Effet de texte qui apparait caractere par caractere */
+@keyframes typewriter-cursor {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: #0A66C2; }
+}
+
+.typewriter-cursor::after {
+  content: "|";
+  animation: typewriter-cursor 1s step-end infinite;
+  color: #0A66C2;
+  font-weight: bold;
+}
+
+/* Scrollbar custom */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F3F2EF;
+}
+::-webkit-scrollbar-thumb {
+  background: #0A66C2;
+  border-radius: 3px;
+}
+
+/* Post LinkedIn style */
+.linkedin-post {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.6;
+  font-size: 14px;
+  color: #191919;
+}
+
+/* Notification toast */
+@keyframes notification-slide {
+  0% { transform: translateX(100%); opacity: 0; }
+  10% { transform: translateX(0); opacity: 1; }
+  90% { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(100%); opacity: 0; }
+}
+
+.notification-toast {
+  animation: notification-slide 4s ease-in-out forwards;
+}
+
+/* Glow pour le badge SPINEX Edition */
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 5px rgba(218, 165, 32, 0.3); }
+  50% { box-shadow: 0 0 15px rgba(218, 165, 32, 0.6); }
+}
+
+.spinex-glow {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+/* Flamme animation pour bullshit meter 90+ */
+@keyframes flame-flicker {
+  0%, 100% { transform: scaleY(1) translateY(0); }
+  25% { transform: scaleY(1.1) translateY(-2px); }
+  50% { transform: scaleY(0.9) translateY(1px); }
+  75% { transform: scaleY(1.05) translateY(-1px); }
+}
+
+.flame-effect {
+  animation: flame-flicker 0.3s ease-in-out infinite;
+}
