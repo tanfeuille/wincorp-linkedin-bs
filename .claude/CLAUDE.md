@@ -29,3 +29,8 @@ Pas de tests, pas de CI, pas de déploiement actif.
 ## ERREURS CONNUES
 
 Aucune — projet non démarré.
+
+## Spec-Driven Development (SDD)
+
+Ce projet suit le framework SDD. Voir `wincorp-docs/SPEC-DRIVEN-DEVELOPMENT.md`.
+Specs locales dans `specs/`. Template : `specs/_SPEC-TEMPLATE.md`.
